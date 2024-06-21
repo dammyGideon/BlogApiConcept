@@ -1,0 +1,11 @@
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.Shared\bin\Debug\net8.0\Waji.Api.Shared.deps.json
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.Shared\bin\Debug\net8.0\Waji.Api.Shared.dll
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.Shared\bin\Debug\net8.0\Waji.Api.Shared.pdb
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.Shared\obj\Debug\net8.0\Waji.Api.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.Shared\obj\Debug\net8.0\Waji.Api.Shared.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.Shared\obj\Debug\net8.0\Waji.Api.Shared.AssemblyInfo.cs
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.Shared\obj\Debug\net8.0\Waji.Api.Shared.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.Shared\obj\Debug\net8.0\Waji.Api.Shared.dll
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.Shared\obj\Debug\net8.0\refint\Waji.Api.Shared.dll
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.Shared\obj\Debug\net8.0\Waji.Api.Shared.pdb
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.Shared\obj\Debug\net8.0\ref\Waji.Api.Shared.dll

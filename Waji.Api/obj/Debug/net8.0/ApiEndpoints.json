@@ -1,0 +1,192 @@
+[
+  {
+    "ContainingType": "Waji.Api.Controllers.AuthorController",
+    "Method": "GetBlogByAuthor",
+    "RelativePath": "api/Author/{authorId}/Blog",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Waji.Api.Controllers.AuthorController",
+    "Method": "GetBlogByAuthorId",
+    "RelativePath": "api/Author/{authorId}/Blog-cqrs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Waji.Api.Shared.Response.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[Waji.Api.Shared.Response.BlogResponse, Waji.Api.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Waji.Api.Controllers.AuthorController",
+    "Method": "CreateAuthor",
+    "RelativePath": "api/Author/register-author",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Waji.Api.Shared.Request.CreateAuthorRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Waji.Api.Controllers.AuthorController",
+    "Method": "CreateAuthorcqrs",
+    "RelativePath": "api/Author/register-author-cqrs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Waji.Api.CQRS.Commands.RegisterAuthorCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Waji.Api.Controllers.BlogController",
+    "Method": "CreateNewBlog",
+    "RelativePath": "api/Blog/create-blog",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Waji.Api.Shared.Request.BlogCreationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Waji.Api.Controllers.BlogController",
+    "Method": "CreateNewBlogUsingCQRS",
+    "RelativePath": "api/Blog/create-blog-cqrs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Waji.Api.CQRS.Commands.CreateBlogCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Waji.Api.Controllers.PostController",
+    "Method": "GetAllPostByBlog",
+    "RelativePath": "api/Post/{blogId}/post-by-blog",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "blogId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Waji.Api.Controllers.PostController",
+    "Method": "GetPostsByBlog",
+    "RelativePath": "api/Post/{blogId}/post-by-blog-cqrs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "blogId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Waji.Api.Shared.Response.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[Waji.Api.Shared.Response.PostResponse, Waji.Api.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Waji.Api.Controllers.PostController",
+    "Method": "CreatePostToABlog",
+    "RelativePath": "api/Post/create-post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Waji.Api.Shared.Request.PostToBlogRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Waji.Api.Controllers.PostController",
+    "Method": "CreatePostsByBlog",
+    "RelativePath": "api/Post/post-by-blog-cqrs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Waji.Api.CQRS.Commands.CreateBlogCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Waji.Api.Shared.Response.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[Waji.Api.Shared.Response.PostResponse, Waji.Api.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

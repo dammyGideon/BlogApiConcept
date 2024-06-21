@@ -1,0 +1,17 @@
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\bin\Debug\net8.0\Waji.Api.CQRS.deps.json
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\bin\Debug\net8.0\Waji.Api.CQRS.dll
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\bin\Debug\net8.0\Waji.Api.CQRS.pdb
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\obj\Debug\net8.0\Waji.Api.CQRS.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\obj\Debug\net8.0\Waji.Api.CQRS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\obj\Debug\net8.0\Waji.Api.CQRS.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\obj\Debug\net8.0\Waji.Api.CQRS.AssemblyInfo.cs
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\obj\Debug\net8.0\Waji.Api.CQRS.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\obj\Debug\net8.0\Waji.Api.CQRS.dll
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\obj\Debug\net8.0\refint\Waji.Api.CQRS.dll
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\obj\Debug\net8.0\Waji.Api.CQRS.pdb
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\obj\Debug\net8.0\ref\Waji.Api.CQRS.dll
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\bin\Debug\net8.0\Waje.Api.Data.dll
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\bin\Debug\net8.0\Waji.Api.Shared.dll
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\bin\Debug\net8.0\Waje.Api.Data.pdb
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\bin\Debug\net8.0\Waji.Api.Shared.pdb
+C:\Users\HP\source\repos\WajeInterview\src\Waji.Api.CQRS\obj\Debug\net8.0\Waji.Api.D636131D.Up2Date

@@ -1,0 +1,117 @@
+name: dockercompose7726316648453443214
+services:
+  app_db:
+    container_name: app_db
+    environment:
+      POSTGRES_DB: wajeInterview
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pg_isready -U postgres
+      timeout: 5s
+      interval: 10s
+      retries: 5
+    image: postgres:latest
+    networks:
+      dev: null
+    ports:
+    - mode: ingress
+      target: 5432
+      published: "5433"
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: app_data
+      target: /var/lib/postgresql/data
+      volume: {}
+  init-db:
+    build:
+      context: C:\Users\HP\source\repos\WajeInterview\src
+      dockerfile: Waji.Api/Dockerfile
+      target: init-db
+    command:
+    - sh
+    - -c
+    - |-
+      while ! pg_isready -h app_db -p 5432 -U postgres; do sleep 1; done &&
+             dotnet ef database update --project Waje.Api.Data --startup-project Waji.Api
+    depends_on:
+      app_db:
+        condition: service_healthy
+        required: true
+    environment:
+      ConnectionStrings__WajeDatabase: User ID=postgres;Password=password;Host=app_db;Port=5432;Database=wajeInterview;Pooling=true;
+    networks:
+      dev: null
+  test:
+    build:
+      context: C:\Users\HP\source\repos\WajeInterview\src
+      dockerfile: Waji.Api/Dockerfile
+      target: test
+    depends_on:
+      app_db:
+        condition: service_started
+        required: true
+    networks:
+      dev: null
+    volumes:
+    - type: bind
+      source: C:\Users\HP\source\repos\WajeInterview\src\testresults
+      target: /testresults
+      bind:
+        create_host_path: true
+  waji.api:
+    build:
+      context: C:\Users\HP\source\repos\WajeInterview\src
+      dockerfile: Waji.Api/Dockerfile
+    container_name: waja-services
+    depends_on:
+      app_db:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__WajeDatabase: User ID=postgres;Password=password;Host=app_db;Port=5432;Database=wajeInterview;Pooling=true;
+    image: wajiapi
+    networks:
+      dev: null
+    ports:
+    - mode: ingress
+      target: 8080
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      published: "8080"
+      protocol: tcp
+    - mode: ingress
+      target: 8081
+      protocol: tcp
+    - mode: ingress
+      target: 8081
+      published: "8081"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\HP\AppData\Roaming/Microsoft/UserSecrets
+      target: /home/app/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\HP\AppData\Roaming/ASP.NET/Https
+      target: /home/app/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  dev:
+    name: dev
+volumes:
+  app_data:
+    name: dockercompose7726316648453443214_app_data

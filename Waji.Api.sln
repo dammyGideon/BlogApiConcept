@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Waji.Api", "Waji.Api\Waji.Api.csproj", "{CC626D83-22F7-42EC-85D6-A189F46D9247}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Waji.Api.Test", "Waji.Api.Test\Waji.Api.Test.csproj", "{47EE7485-BD99-4B44-828F-193D8E3956EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Waje.Api.Data", "Waje.Api.Data\Waje.Api.Data.csproj", "{9931E741-44C1-4683-B3BD-BB3C3C037308}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Waji.Api.CQRS", "Waji.Api.CQRS\Waji.Api.CQRS.csproj", "{C8BBAEE3-47F6-4699-B51B-51614E7A36E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Waji.Api.Shared", "Waji.Api.Shared\Waji.Api.Shared.csproj", "{BD6CA6AF-BD60-4C7E-AB58-9DD08CAE8871}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B371601C-7CCB-428E-A316-9DF8EBE11606}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC626D83-22F7-42EC-85D6-A189F46D9247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC626D83-22F7-42EC-85D6-A189F46D9247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC626D83-22F7-42EC-85D6-A189F46D9247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC626D83-22F7-42EC-85D6-A189F46D9247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47EE7485-BD99-4B44-828F-193D8E3956EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47EE7485-BD99-4B44-828F-193D8E3956EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47EE7485-BD99-4B44-828F-193D8E3956EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47EE7485-BD99-4B44-828F-193D8E3956EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9931E741-44C1-4683-B3BD-BB3C3C037308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9931E741-44C1-4683-B3BD-BB3C3C037308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9931E741-44C1-4683-B3BD-BB3C3C037308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9931E741-44C1-4683-B3BD-BB3C3C037308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8BBAEE3-47F6-4699-B51B-51614E7A36E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8BBAEE3-47F6-4699-B51B-51614E7A36E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8BBAEE3-47F6-4699-B51B-51614E7A36E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8BBAEE3-47F6-4699-B51B-51614E7A36E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD6CA6AF-BD60-4C7E-AB58-9DD08CAE8871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD6CA6AF-BD60-4C7E-AB58-9DD08CAE8871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD6CA6AF-BD60-4C7E-AB58-9DD08CAE8871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD6CA6AF-BD60-4C7E-AB58-9DD08CAE8871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B371601C-7CCB-428E-A316-9DF8EBE11606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B371601C-7CCB-428E-A316-9DF8EBE11606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B371601C-7CCB-428E-A316-9DF8EBE11606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B371601C-7CCB-428E-A316-9DF8EBE11606}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F20B8EF-137F-4C5B-8CEF-06F9EAADEAA0}
+	EndGlobalSection
+EndGlobal

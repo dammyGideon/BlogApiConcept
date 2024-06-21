@@ -1,0 +1,74 @@
+version: '3.4'
+
+services:
+  waji.api:
+    image: ${DOCKER_REGISTRY-}wajiapi
+    depends_on:
+      - app_db
+    container_name: waja-services
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    build:
+      context: .
+      dockerfile: Waji.Api/Dockerfile
+    environment:
+      - ConnectionStrings__WajeDatabase=User ID=postgres;Password=password;Host=app_db;Port=5432;Database=wajeInterview;Pooling=true;
+      - ASPNETCORE_URLS=http://+:8080
+    networks:
+      - dev
+
+  init-db:
+    build:
+      context: .
+      target: init-db
+      dockerfile: Waji.Api/Dockerfile
+    environment:
+      - ConnectionStrings__WajeDatabase=User ID=postgres;Password=password;Host=app_db;Port=5432;Database=wajeInterview;Pooling=true;
+    command: >
+      sh -c "while ! pg_isready -h app_db -p 5432 -U postgres; do sleep 1; done &&
+             dotnet ef database update --project Waje.Api.Data --startup-project Waji.Api"
+    depends_on:
+      app_db:
+        condition: service_healthy
+    networks:
+      - dev
+
+  app_db:
+    image: postgres:latest
+    container_name: app_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=wajeInterview
+    ports:
+      - "5433:5432"
+    restart: always
+    volumes:
+      - app_data:/var/lib/postgresql/data
+    networks:
+      - dev
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  test:
+    build:
+      context: .
+      target: test
+      dockerfile: Waji.Api/Dockerfile
+    depends_on:
+      - app_db
+    volumes:
+      - ./testresults:/testresults
+    networks:
+      - dev
+
+volumes:
+  app_data:
+
+networks:
+  dev:
+    name: dev
