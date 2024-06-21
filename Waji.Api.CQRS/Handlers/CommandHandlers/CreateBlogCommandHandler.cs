@@ -38,6 +38,15 @@ namespace Waji.Api.CQRS.Handlers.CommandHandlers
                 return new BaseResponse<BlogCreationReponse> { Success = false, Message = "Author with this Id Does not Exist", StatusCode = HttpStatusCode.NotFound };
             };
 
+
+            var blogExist = await _unitOfWork.GetRepository<Blog>().GetByIdAsync(d => d.Name == request.BlogName, false);
+
+            if (blogExist !=null)
+            {
+                return new BaseResponse<BlogCreationReponse> { Success = false, Message = "This Blog Already Exist", StatusCode = HttpStatusCode.Conflict };
+            };
+
+
             Blog blogresponse = new()
             {
                 Name = request.BlogName,

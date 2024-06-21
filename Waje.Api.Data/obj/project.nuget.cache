@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "vPupCKg3swmJ7dgWmvvQTECb/GCkw959RetgvyCgnKgSp6GprOCawdSpX4Q5/Sh+VQepgvcjxuHlIXunF/bajw==",
+  "dgSpecHash": "buhp3fqQP2YAkxXPpaXJAwTmBrIf5/hKJ601h3PatOuFOAlPCDH0RCCZD87JJwaQn4Oz+VAe1/zng4ggVNfVAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\source\\repos\\WajeInterview\\src\\Waje.Api.Data\\Waje.Api.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.2\\fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Waji.Api/1.0.0": {
         "dependencies": {
+          "FluentValidation.AspNetCore": "11.3.0",
           "MediatR": "12.3.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.EntityFrameworkCore": "8.0.6",
@@ -33,6 +34,38 @@
           "lib/net6.0/Castle.Core.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.1.1.0"
+          }
+        }
+      },
+      "FluentValidation/11.9.2": {
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.9.2.0"
+          }
+        }
+      },
+      "FluentValidation.AspNetCore/11.3.0": {
+        "dependencies": {
+          "FluentValidation": "11.9.2",
+          "FluentValidation.DependencyInjectionExtensions": "11.9.2"
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.AspNetCore.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.3.0.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/11.9.2": {
+        "dependencies": {
+          "FluentValidation": "11.9.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.9.2.0"
           }
         }
       },
@@ -980,6 +1013,7 @@
       },
       "Waje.Api.Data/1.0.0": {
         "dependencies": {
+          "FluentValidation.AspNetCore": "11.3.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "8.0.6",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
@@ -993,14 +1027,18 @@
         "dependencies": {
           "MediatR": "12.3.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
-          "Waje.Api.Data": "1.0.0",
-          "Waji.Api.Shared": "1.0.0"
+          "Waje.Api.Data": "1.0.0"
         },
         "runtime": {
           "Waji.Api.CQRS.dll": {}
         }
       },
       "Waji.Api.Shared/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.9.2",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "FluentValidation.DependencyInjectionExtensions": "11.9.2"
+        },
         "runtime": {
           "Waji.Api.Shared.dll": {}
         }
@@ -1034,6 +1072,27 @@
       "sha512": "sha512-rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
       "path": "castle.core/5.1.1",
       "hashPath": "castle.core.5.1.1.nupkg.sha512"
+    },
+    "FluentValidation/11.9.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XeHp9LvFvu1fsQ/NvDCymV02GOCB1nz7ZUhfpI3uMhCcHTkV1K5bMkv+Nc/kuNYyAsX5+5bcmUanIEMd5QN+Eg==",
+      "path": "fluentvalidation/11.9.2",
+      "hashPath": "fluentvalidation.11.9.2.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/11.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jtFVgKnDFySyBlPS8bZbTKEEwJZnn11rXXJ2SQnjDhZ56rQqybBg9Joq4crRLz3y0QR8WoOq4iE4piV81w/Djg==",
+      "path": "fluentvalidation.aspnetcore/11.3.0",
+      "hashPath": "fluentvalidation.aspnetcore.11.3.0.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/11.9.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PMAdnR1fX1c8DyUvu5YvRa0V0JHES8vzXnVX0OSS3z9W/SkuHqcGrtiSOdW1QehG3vZhXsKhqf3wgDzW/OYahA==",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.9.2",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

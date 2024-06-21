@@ -13,10 +13,10 @@ namespace Waji.Api.CQRS.Handlers.CommandHandlers
         public RegisterAuthorCommandHandler(IUnitOfWork unitOfWork) => _unitOfWork = unitOfWork;
         public async Task<BaseResponse<AuthorResponse>> Handle(RegisterAuthorCommand request, CancellationToken cancellationToken)
         {
-            var authorExist = await _unitOfWork.GetRepository<Author>().GetByIdAsync(d => d.Name == request.Name, false);
+            var authorExist = await _unitOfWork.GetRepository<Author>().GetByIdAsync(d => d.Email == request.Email, false);
             if (authorExist.Any())
             {
-                return new BaseResponse<AuthorResponse> { Success = false, Message = "", StatusCode = HttpStatusCode.Conflict };
+                return new BaseResponse<AuthorResponse> { Success = false, Message = "This Email Already Exist", StatusCode = HttpStatusCode.Conflict };
             };
 
             Author author = new()

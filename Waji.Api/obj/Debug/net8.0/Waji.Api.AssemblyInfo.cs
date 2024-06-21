@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Waji.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6615c2565e809e47201d76c7f3bc294abc4e626")]
 [assembly: System.Reflection.AssemblyProductAttribute("Waji.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Waji.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

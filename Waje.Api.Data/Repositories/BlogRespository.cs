@@ -82,7 +82,7 @@ namespace Waje.Api.Data.Repositories
                 BlogId = p.BlogId,
                 Title = p.Title,
                 Content = p.Content,
-                DatePublished = p.DatePublished
+                DatePublished =p.DatePublished,
             }).ToList();
 
 

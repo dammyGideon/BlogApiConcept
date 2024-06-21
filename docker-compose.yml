@@ -49,7 +49,7 @@ services:
     networks:
       - dev
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -68,6 +68,7 @@ services:
 
 volumes:
   app_data:
+
 
 networks:
   dev:

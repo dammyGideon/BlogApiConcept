@@ -1,6 +1,8 @@
 using Waji.Api.Data.ExtentionMethod;
 using Waji.Api.CQRS.Extention;
 using Microsoft.OpenApi.Models;
+using FluentValidation.AspNetCore;
+using Waji.Api.Shared.ValidationExtentionMethod;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +30,12 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddHttpContextAccessor();
 
+builder.Services.AddCors(opt => opt.AddDefaultPolicy(des => {
+    des.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
+
+builder.Services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>());
+builder.Services.AddValidationServices();
 
 var app = builder.Build();
 
@@ -43,6 +51,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Waji.Api v1"));
 }
 
+app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

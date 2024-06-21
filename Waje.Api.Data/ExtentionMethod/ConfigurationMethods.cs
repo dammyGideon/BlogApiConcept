@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FluentValidation.AspNetCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Waje.Api.Data.Contract;
@@ -28,9 +29,9 @@ namespace Waji.Api.Data.ExtentionMethod
             services.AddScoped<IAuthorRepository,AuthorRepository>();
             services.AddScoped<IBlogRepository, BlogRespository>();
             services.AddScoped<IPostRepository, PostRepository>();
-          
 
 
+         
 
             return services;
         }

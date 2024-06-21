@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Waje.Api.Data\Waje.Api.Data.csproj" />
-    <ProjectReference Include="..\Waji.Api.Shared\Waji.Api.Shared.csproj" />
   </ItemGroup>
 
 </Project>

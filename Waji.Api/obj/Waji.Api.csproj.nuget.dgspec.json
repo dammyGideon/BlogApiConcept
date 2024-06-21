@@ -49,6 +49,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
             "Microsoft.AspNetCore.Http.Abstractions": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -114,9 +118,6 @@
             "projectReferences": {
               "C:\\Users\\HP\\source\\repos\\WajeInterview\\src\\Waje.Api.Data\\Waje.Api.Data.csproj": {
                 "projectPath": "C:\\Users\\HP\\source\\repos\\WajeInterview\\src\\Waje.Api.Data\\Waje.Api.Data.csproj"
-              },
-              "C:\\Users\\HP\\source\\repos\\WajeInterview\\src\\Waji.Api.Shared\\Waji.Api.Shared.csproj": {
-                "projectPath": "C:\\Users\\HP\\source\\repos\\WajeInterview\\src\\Waji.Api.Shared\\Waji.Api.Shared.csproj"
               }
             }
           }
@@ -205,6 +206,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.2, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -384,6 +399,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.3.0, )"

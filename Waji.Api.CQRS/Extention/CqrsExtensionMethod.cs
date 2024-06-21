@@ -11,6 +11,7 @@ using Waji.Api.CQRS.Handlers.CommandHandlers;
 using Waji.Api.CQRS.Handlers.QueryHandlers;
 using Waji.Api.CQRS.Queries;
 using Waji.Api.Shared.Response;
+using Waji.Api.Shared.Validation;
 
 namespace Waji.Api.CQRS.Extention
 {
@@ -25,6 +26,7 @@ namespace Waji.Api.CQRS.Extention
             services.AddScoped<IRequestHandler<CreatePostCommand, BaseResponse<PostCreationResponse>>, CreatePostCommandHandler>();
             services.AddScoped<IRequestHandler<GetBlogPostsQuery, BaseResponse<List<PostResponse>>>, GetBlogPostsQueryHandler>();
             services.AddScoped<IRequestHandler<GetBlogsByAuthorQuery, BaseResponse<List<BlogResponse>>>, GetBlogsByAuthorQueryHandler>();
+           
 
         }
     }

@@ -21,10 +21,21 @@ namespace Waje.Api.Data.Repositories
         public async Task<BaseResponse<PostCreationResponse>> CreatePostToBlog(PostToBlogRequest request)
         {
             var blogExist = await _context.Blogs.FirstOrDefaultAsync(d=>d.Id == request.BlogId);
-            if (blogExist == null) new BaseResponse<PostCreationResponse> {Success=false,Message="No Blog found",StatusCode=HttpStatusCode.NotFound };
+            if (blogExist == null)
+            {
+                new BaseResponse<PostCreationResponse> { Success = false, Message = "No Blog found", StatusCode = HttpStatusCode.NotFound };
+
+            }
+
 
             var postExist = await _context.Posts.FirstOrDefaultAsync(d=>d.Title == request.Title);
-            if (blogExist == null) new BaseResponse<PostCreationResponse> { Success = false, Message = "This Blog Post Exist", StatusCode = HttpStatusCode.NotFound };
+            if (blogExist == null)
+            {
+                return new BaseResponse<PostCreationResponse> { Success = false, Message = "This Blog Post Exist", StatusCode = HttpStatusCode.NotFound };
+            }
+
+       
+
 
             Post blogPost = new()
             {
@@ -57,7 +68,16 @@ namespace Waje.Api.Data.Repositories
         public async Task<BaseResponse<List<PostResponse>>> GetPostByIdAsync(int blogId)
         {
             var postExist = await _context.Posts.Where(d=>d.BlogId == blogId).ToListAsync();
-            if (postExist == null) new BaseResponse<List<PostResponse>> { Success = false, Message="", StatusCode=HttpStatusCode.NotFound};
+            if (postExist == null)
+            {
+                return new BaseResponse<List<PostResponse>> { 
+                    Success = false,
+                    Message = $"Blog with this Id does not exit {blogId} ", 
+                    StatusCode = HttpStatusCode.NotFound 
+                };
+            }
+                
+               
 
             var response = postExist.Select(d => new PostResponse()
             {

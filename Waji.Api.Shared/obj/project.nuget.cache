@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "8BG/VPnNiPAqiBlp+Rp3tHzBudNZYZJlZEk5ecezC62eAk5cpSM3UFo/TF79N9WbZuSiVGoBInZOouljBfhGlw==",
+  "dgSpecHash": "Z7uQqVtSzGcFvjCDkP5t8fkQH2QjNexoihXYbzhY7TCoQrFDH6ovBgKx/w349C/cFcNjQ8kJDJE0eo9DJGMvUA==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\source\\repos\\WajeInterview\\src\\Waji.Api.Shared\\Waji.Api.Shared.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.2\\fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
